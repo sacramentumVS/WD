@@ -1,0 +1,43 @@
+.instagrammPhoto {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-items: center;
+}
+.instargammLogo {
+    margin-bottom: 45px;
+}
+.photoBox {
+    width: 100%;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px; 
+}
+.photoItem {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+.photoItem > img{ 
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width:740px) {
+    .photoBox {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .photoItem {
+        width: 100%;
+    }
+    
+}

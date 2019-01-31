@@ -1,0 +1,109 @@
+@import 'header.css';
+@import 'logo.css';
+@import 'FeaturedPosts.css';
+@import 'contentPage.css';
+@import 'instagrammPhoto.css';
+@import 'footer.css';
+
+@font-face {
+    font-family: "JosefinSans-Bold";
+    src: url("../font/Josefin_Sans/JosefinSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../font/Open_Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("../font/Open_Sans/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "fontawesome-webfont";
+    src: url("../font/fontawesome-webfont.ttf");
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --acent-color: #b59f5b;
+    --width-inner: 1170px;
+    --padding-inner: 15px;
+}
+
+body {
+    font-size: 15px;
+    font-family: "OpenSans-Regular";
+    background-color: #fff;
+    padding: 0 45px;
+}
+
+.inner {
+    width: var(--width-inner);
+    margin: auto;
+}
+
+.displaynone {
+    display: none;
+}
+
+.categoty-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--acent-color);
+    text-decoration: none;
+
+}
+
+.Aside-title {
+    text-align: center;
+    font-family: "JosefinSans-Bold";
+    line-height: 29.15px;
+    text-transform: uppercase;
+    padding-bottom: 13px;
+    position: relative;
+    margin-bottom: 23px;
+}
+
+.Aside-title::after {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    width: 67px;
+    height: 4px;
+
+    background-color: var(--acent-color);
+}
+
+.fa {
+
+    transition: all 0.5s;
+}
+
+.fa:hover {
+    color: var(--acent-color);
+}
+
+
+@media screen and (max-width: 768px) {
+      body {
+          padding: 0px 0px;
+    }
+}

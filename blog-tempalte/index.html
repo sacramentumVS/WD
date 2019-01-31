@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"> <a href="#" class="nav__link">Home <i>&#9662</i></a> </li>
+                <li class="nav__item"> <a href="#" class="nav__link">Features <i>&#9662</i></a> </li>
+                <li class="nav__item"> <a href="#" class="nav__link">Posttypes <i>&#9662</i></a> </li>
+                <li class="nav__item"> <a href="#" class="nav__link">Pages <i>&#9662</i></a> </li>
+                <li class="nav__item"> <a href="#" class="nav__link">Categories <i>&#9662</i></a> </li>
+                <li class="nav__item"> <a href="#" class="nav__link">Contact</a> </li>
+                <li class="nav__item displaynone">
+                    <div class="hamb"></div>
+                </li>
+            </ul>
+        </nav>
+        <div class="social__header">
+            <a href="#"> <i class="fa fa-twitter"></i> </a>
+            <a href="#"> <i class="fa fa-facebook"></i> </a>
+            <a href="#"> <i class="fa  fa-linkedin"></i> </a>
+            <a href="#"> <i class="fa  fa-instagram"></i> </a>
+            <a href="#"> <i class="fa  fa-google-plus"></i> </a>
+        </div>
+    </header>
+
+    <div class="logo">
+        <h1><a href="#">NOEMI</a></h1>
+    </div>
+
+    <section class="FeaturedPosts">
+        <ul class="FeaturedPosts__list">
+            <li class="FeaturedPosts__item item1">
+                <div class="itemContent">
+                    <div class="itemContent__categoryBox">
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">beauty</a> </span>
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">health</a> </span>
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">lifestyle</a> </span>
+                    </div>
+                    <h4 class="itemContent__title">FROM GRAPEFRUIT TO LEMONS TO ORANGES, CITRUS DOES YOU GOOD!</h4>
+                    <div class="dateAndComments">
+                        <time datetime="2015-06-14">June 14, 2015</time>
+                        <i class="fa fa-comment dateAndComments__commentI"><span>24</span></i>
+                    </div>
+                </div>
+            </li>
+            <li class="FeaturedPosts__item item1">
+                <div class="itemContent">
+                    <div class="itemContent__categoryBox">
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">beauty</a> </span>
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">health</a> </span>
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">lifestyle</a> </span>
+                    </div>
+                    <h4 class="itemContent__title">FROM GRAPEFRUIT TO LEMONS TO ORANGES, CITRUS DOES YOU GOOD!</h4>
+                    <div class="dateAndComments">
+                        <time datetime="2015-06-14">June 14, 2015</time>
+                        <i class="fa fa-comment dateAndComments__commentI"><span>24</span></i>
+                    </div>
+                </div>
+            </li>
+            <li class="FeaturedPosts__item item1">
+                <div class="itemContent">
+                    <div class="itemContent__categoryBox">
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">beauty</a> </span>
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">health</a> </span>
+                        <span class="category itemContent__category"> <a class="categoty-link itemContent__category__categoty-link" href="#">lifestyle</a> </span>
+                    </div>
+                    <h4 class="itemContent__title">FROM GRAPEFRUIT TO LEMONS TO ORANGES, CITRUS DOES YOU GOOD!</h4>
+                    <div class="dateAndComments">
+                        <time datetime="2015-06-14">June 14, 2015</time>
+                        <i class="fa fa-comment dateAndComments__commentI"><span>24</span></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="contentPage">
+        <ul class="postList">
+            <li class="post postList__post" v-for="post in posts">
+                <div class="posthead">
+                    <div class="left">
+                        <img v-bind:src="post.img" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="titlePost">
+                            <span class="category" v-for="cat in post.categoriy"> <a class="categoty-link" href="#">{{cat}}</a> </span>
+                            <h2 class="post__title"><a href="#">{{post.title}}</a></h2>
+                            <div class="postInfo">
+                                <time datetime="2015-06-14">{{post.data}}</time>
+                                <span> Author.</span>
+                            </div>
+                        </div>
+                        <div class="dicriotionPost">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit est facilis suscipit eligendi adipisci deleniti!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comemntPostAndLinks">
+                    <div class="commentPost"><i class="fa fa-comment"></i> <span>{{post.comments}}</span></div>
+                    <div class="sharePost">Share <i class="fa fa-twitter"></i> <i class="fa fa-pinterest"></i> <i class="fa fa-facebook-f"></i></div>
+                </div>
+            </li>
+        </ul>
+        <aside class="sideBar">
+            <div class="about">
+                <img src="img/aboutAva.png" alt="" class="abotAvatar">
+                <div class="aboutContent">
+                    <h2 class="aboutTitle">About Me</h2>
+                    <p class="aboutText">
+                       Hi! Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                    </p>
+                    <img src="img/aboutlogo.png" alt="" class="aboutLogo">
+                    <div class="aboutFooter">
+                        <div class="aboutSocial">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe">
+                <h2 class="Aside-title"> Newsletter </h2>
+                <form action="" class="subscribe__form">
+                    <input type="email" class="form__email" placeholder="Your email address">
+                    <input type="submit" value="subscribe" class="form__btn">
+                </form>
+            </div>
+            <div class="categoriesAside">
+                <h2 class="Aside-title"> Categories</h2>
+                <ul class="Aside-categirues">
+                    <li class="Aside-categories-item"><a href="#">Beauty</a> <span>12</span></li>
+                    <li class="Aside-categories-item"><a href="#">Health</a> <span>4</span></li>
+                    <li class="Aside-categories-item"><a href="#">lifestyle</a> <span>145</span></li>
+                    <li class="Aside-categories-item"><a href="#">Music</a> <span>64</span></li>
+                    <li class="Aside-categories-item"><a href="#">Sport</a> <span>28</span></li>
+                </ul>
+            </div>
+            <div class="precent-post">
+                <h2 class="Aside-title"> Precent Post </h2>
+                <ul class="precent-post-list">
+                    <li class="precent-post-item">
+                        <img src="img/precent-post1.jpg" alt="" class="precent-post-img">
+                        <div class="precent-post-cont">
+                            <time>June 14, 2015</time>
+                            <h4><a href="#">Lorem Ipsum Right now</a></h4>
+                        </div>
+                    </li>
+                     <li class="precent-post-item">
+                        <img src="img/precent-post2.jpg" alt="" class="precent-post-img">
+                        <div class="precent-post-cont">
+                            <time>June 14, 2015</time>
+                            <h4><a href="#">Lorem ipsum dolor sit.</a></h4>
+                        </div>
+                    </li>
+                     <li class="precent-post-item">
+                        <img src="img/precent-post3.jpg" alt="" class="precent-post-img">
+                        <div class="precent-post-cont">
+                            <time>June 14, 2015</time>
+                            <h4><a href="#">Lorem ipsum dolor sit amet.</a></h4>
+                        </div>
+                    </li>
+                     <li class="precent-post-item">
+                        <img src="img/precent-post4.jpg" alt="" class="precent-post-img">
+                        <div class="precent-post-cont">
+                            <time>June 14, 2015</time>
+                            <h4><a href="#">Lorem Ipsum Right now</a></h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <form class="search">
+                <input type="text" placeholder="search">
+                <button>
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <div class="tags">
+               <h2 class="Aside-title"> Tags </h2>
+                <a href="#">Fashion</a>
+                <a href="#">Music</a>
+                <a href="#">Lorem tag</a>
+                <a href="#">Tag</a>
+                <a href="#">Ipsum tag</a>
+                <a href="#">Travel</a>
+            </div>
+        </aside>
+    </section>
+    <section class="instagrammPhoto">
+         <h2 class="Aside-title"> Follow @CITYBLOG </h2>
+         <img src="img/instalogo.png" alt="" class="instargammLogo">
+         <ul class="photoBox">
+             <li class="photoItem">
+                 <img src="img/instaphoto1.jpg" alt="">
+             </li>
+             
+             <li class="photoItem">
+                 <img src="img/instaphoto2.jpg" alt="">
+             </li>
+             
+             <li class="photoItem">
+                 <img src="img/instaphoto3.jpg" alt="">
+             </li>
+             
+             <li class="photoItem">
+                 <img src="img/instaphoto4.jpg" alt="">
+             </li>
+            
+         </ul>
+    </section>
+    <footer>
+        <div class="footer-social">
+            <ul class="footer-social-box">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        
+        <img src="img/on-top----.png" alt="">
+        <p class="copy">
+            Copyright © 2009–2016 City Blog LLC.    
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/vueComp/post.js"></script>
+</body>
+
+</html>
