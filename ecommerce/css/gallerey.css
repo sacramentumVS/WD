@@ -1,0 +1,141 @@
+.gallerey {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+	margin-top: 100px;
+}
+
+.gallerey__item {
+	flex-basis: 265px;
+	margin-bottom: 50px;
+}
+
+.gallerey__cover {
+	margin-bottom: 18px;
+
+	position: relative;
+}
+
+.gallerey__discription {}
+
+.gallerey__title {
+	font-family: 'Lora', serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+
+	color: #222222;
+}
+
+.gallerey__price {
+	display: block;
+
+	color: #f72464;
+
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.gallerey__price > del {
+	margin-right: 10px;
+
+	color: #52575d;
+}
+
+.lightbox {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+
+	background-color: rgba(0, 0, 0, 0.53);
+	opacity: 0;
+
+	transition: all 0.5s;
+}
+
+.lightbox-btn {
+	width: 120px;
+	height: 40px;
+	background-color: #f72464;
+
+	border: 1px solid transparent;
+	border-radius: 5px;
+
+	color: #fff;
+	margin: 6.5px 0;
+
+	cursor: pointer;
+
+	transition: all 0.5s;
+}
+
+.lightbox-btn:hover {
+	border: 1px solid #fff;
+	background-color: transparent;
+	opacity: 1;
+}
+
+.gallerey__cover:hover .lightbox {
+	opacity: 1;
+}
+
+.browsAll,.readAll {
+	display: block;
+	margin: 0 auto 100px auto;
+	
+	width: 220px;
+	height: 40px;
+
+	border: 1px solid #f72464;
+	border-radius: 5px;
+
+	background-color: transparent;
+
+	color: #919191;
+	font-family: 'Lora', serif;
+	text-transform: uppercase;
+	
+	cursor: pointer;
+	
+	transition: all 0.5s;
+}
+.browsAll:hover, .readAll:hover {
+	background-color: #f72464;	
+	color: #fff;
+}
+
+@media screen and ( max-width: 767px ) {
+	.gallerey {
+		margin-top: 50px;
+		justify-content: center;
+	}
+	
+}
+@media screen and ( max-width: 460px ) {
+	.gallerey {
+	}
+}
